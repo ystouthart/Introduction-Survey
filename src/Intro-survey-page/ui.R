@@ -8,6 +8,7 @@
 #
 
 library(shiny)
+library(tidyverse)
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
@@ -19,16 +20,18 @@ shinyUI(fluidPage(
     sidebarLayout(
         sidebarPanel(
             sliderInput("bins",
-                        "Number of bins:",
+                        "Number of histogram bins:",
                         min = 1,
-                        max = 50,
+                        max = (52-20),
                         value = 30)
         ),
+        
 
         # Show a plot of the generated distribution
         mainPanel(
             plotOutput("agePlot"),
-            plotOutput("genderPlot")
+            plotOutput("genderPlot"),
+            plotOutput("CountryPlot")
         )
     )
 ))
