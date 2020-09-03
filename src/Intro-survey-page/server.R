@@ -26,7 +26,7 @@ shinyServer(function(input, output) {
             )
         
         ggplot(surveydata, aes(x=Age))+
-            geom_histogram(breaks = bins, fill="steelblue") +
+            geom_histogram(breaks = bins, fill="steelblue", color = "white") +
             labs(
                 x = "Age",
                 title = "Histogram of ADS Age Distribution",
